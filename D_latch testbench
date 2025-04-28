@@ -1,0 +1,16 @@
+module d_latch_tb();
+  reg d,en;
+  wire y;
+  d_latch uut (y,d,en);
+  initial
+    begin
+      en=0; d=1;
+      #5 en=1; d=1;
+      #5 en=1; d=0;
+    end
+  initial
+    begin
+      $dumpfile("dum.vcd");
+      $dumpvars(1);
+    end 
+endmodule
