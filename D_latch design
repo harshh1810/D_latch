@@ -1,0 +1,12 @@
+module d_latch (y,d,en);
+  input d,en;
+  output reg y;
+  
+  always@(*)
+    begin 
+      if(en)
+        y<=d;
+      else
+        y<=0;
+    end
+endmodule
